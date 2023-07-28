@@ -6,6 +6,8 @@ const PORT = 8009;
 
 require('dotenv').config();
 
+const songNamesRoute = require('./routes/songNames');
+app.use('/songNames', songNamesRoute);
 app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
